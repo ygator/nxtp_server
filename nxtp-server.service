@@ -1,0 +1,19 @@
+[Unit]
+Description=NXTP Protocol v1 Time Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=nxtp
+Group=nxtp
+ExecStart=/usr/local/sbin/nxtp_server 12300
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
