@@ -81,7 +81,7 @@ date ASCII dd/MM/yyyy, time ASCII HH:mm:ss, and XOR checksum.
 Notes
 -----
 - Empty timezone and GMT/GMTStandardTime return Europe/London, including BST.
-- UTC* returns fixed UTC.
+- UTC returns fixed UTC.
 - Keep Raspberry Pi OS tzdata updated: sudo apt update && sudo apt upgrade.
 - Timezone identifiers are mapped to IANA tzdata names in the C source.
   Some historical Windows timezone identifiers have no exact one-to-one IANA
